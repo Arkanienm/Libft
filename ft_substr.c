@@ -6,7 +6,7 @@
 /*   By: amurtas <amurtas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 13:08:44 by amurtas           #+#    #+#             */
-/*   Updated: 2025/10/24 10:34:45 by amurtas          ###   ########.fr       */
+/*   Updated: 2025/10/24 11:44:50 by amurtas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,9 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
-	size_t	a;
 	char	*sbstr;
-	char	*scpy;
 
 	i = 0;
-	a = 0;
 	if (!s)
 		return (NULL);
 	if (len > ft_strlen(s) - start)
@@ -30,17 +27,16 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		sbstr = ft_strdup("");
 		return (sbstr);
 	}
-	scpy = (char *)s;
-	sbstr = malloc(sizeof(char) * len);
+	sbstr = malloc(sizeof(char) * len + 1);
 	if (!sbstr)
 		return (NULL);
-	i = start;
-	while (start < len)
+	i = 0;
+	while (s[start] && i < len)
 	{
-		sbstr[a] = scpy[i];
+		sbstr[i] = s[start];
 		i++;
-		a++;
 		start++;
 	}
+	sbstr[i] = '\0';
 	return (sbstr);
 }

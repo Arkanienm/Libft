@@ -6,7 +6,7 @@
 /*   By: amurtas <amurtas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 14:20:12 by amurtas           #+#    #+#             */
-/*   Updated: 2025/10/24 10:48:31 by amurtas          ###   ########.fr       */
+/*   Updated: 2025/10/24 17:54:59 by amurtas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@ int	ft_lstsize(t_list *lst)
 	if (!lst)
 		return (0);
 	while (lst != NULL)
+	{
+		lst = lst->next;
 		i++;
+	}
 	return (i);
 }

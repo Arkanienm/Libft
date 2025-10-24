@@ -6,13 +6,13 @@
 /*   By: amurtas <amurtas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 11:24:12 by amurtas           #+#    #+#             */
-/*   Updated: 2025/10/20 09:43:57 by amurtas          ###   ########.fr       */
+/*   Updated: 2025/10/24 18:13:11 by amurtas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char	*dest_cpy;
 	unsigned char	*src_cpy;

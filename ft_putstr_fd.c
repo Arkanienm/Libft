@@ -6,12 +6,11 @@
 /*   By: amurtas <amurtas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 10:56:54 by amurtas           #+#    #+#             */
-/*   Updated: 2025/10/20 11:06:38 by amurtas          ###   ########.fr       */
+/*   Updated: 2025/10/24 12:20:06 by amurtas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 void	ft_putstr_fd(char *s, int fd)
 {

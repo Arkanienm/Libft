@@ -6,7 +6,7 @@
 /*   By: amurtas <amurtas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 15:13:44 by amurtas           #+#    #+#             */
-/*   Updated: 2025/10/24 10:49:36 by amurtas          ###   ########.fr       */
+/*   Updated: 2025/10/24 17:37:04 by amurtas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,12 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*current;
 
-	if (!lst || !del)
+	if (!lst && !del)
 		return ;
 	current = *lst;
-	while (*lst)
+	while (current->next != NULL)
 	{
+		ft_lstclear(&current, del);
 		current = current->next;
-		ft_lstdelone(*lst, del);
-		*lst = current;
 	}
 }

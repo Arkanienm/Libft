@@ -6,7 +6,7 @@
 /*   By: amurtas <amurtas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 11:44:40 by amurtas           #+#    #+#             */
-/*   Updated: 2025/10/20 09:43:29 by amurtas          ###   ########.fr       */
+/*   Updated: 2025/10/24 12:13:19 by amurtas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	else
 	{
 		i = n;
-		while (i > 0)
-		{
-			i--;
+		while (i-- > 0)
 			dest_cpy[i] = src_cpy[i];
-		}
 	}
 	return (dest);
 }
